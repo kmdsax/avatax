@@ -76,7 +76,7 @@ class OnePica_AvaTax_Model_Action_Validator extends OnePica_AvaTax_Model_Action_
             true
         );
         //if there is no use cases for AvaTax services, return address as valid without doing a lookup
-        if (!$isAddressValidationOn && !$isAddressNormalizationOn && !$isAddressActionable) {
+        if (!$isAddressValidationOn && !$isAddressNormalizationOn && $isAddressActionable) {
             return true;
         }
 
